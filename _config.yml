@@ -1,0 +1,17 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Carson Joinery
+email: info@carsonjoinery.com
+description: > # this means to ignore newlines until "baseurl:"
+  Carson Joinery offers a bespoke joinery service across East Sussex, Surrey, and areas in Kent such as Tunbridge Wells and Sevenoaks. We pride ourselves on our quality and professionalism.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://carsonjoinery.com" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown

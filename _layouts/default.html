@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    <div id="pt-main" class="pt-perspective">
+      <div class="pt-page pt-page-1">
+        <div class="loader">
+          <div class="welcome-container">
+            <h1>Carson Joinery</h1>
+          </div>
+        </div>        
+      </div>
+      <div class="pt-page pt-page-2">
+        {% include header.html %}
+        {{ content }}
+      </div>
+    </div>
+
+    
+
+    {% include footer.html %}
+
+    <script src="{{ "/js/plugins.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/app.js" | prepend: site.baseurl }}"></script>
+  </body>
+
+</html>
