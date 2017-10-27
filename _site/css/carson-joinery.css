@@ -2269,6 +2269,12 @@ header {
 .gallery-modal ul {
   margin: 2rem 0;
   padding: 0; }
+  .gallery-modal ul:after {
+    content: "";
+    clear: both;
+    display: table;
+    width: 0;
+    height: 0; }
   .gallery-modal ul li {
     float: left; }
     .gallery-modal ul li a {
