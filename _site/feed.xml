@@ -4,10 +4,10 @@
     <title>Carson Joinery</title>
     <description>Carson Joinery offers a bespoke joinery service across East Sussex, Surrey, and areas in Kent such as Tunbridge Wells and Sevenoaks. We pride ourselves on our quality and professionalism.
 </description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 27 Oct 2017 13:56:07 +0100</pubDate>
-    <lastBuildDate>Fri, 27 Oct 2017 13:56:07 +0100</lastBuildDate>
+    <link>http://www.carsonjoinery.com/</link>
+    <atom:link href="http://www.carsonjoinery.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 27 Oct 2017 14:04:55 +0100</pubDate>
+    <lastBuildDate>Fri, 27 Oct 2017 14:04:55 +0100</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
   </channel>
