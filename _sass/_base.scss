@@ -100,7 +100,7 @@ header {
   }
 }
 
-#menu-button {
+#menu-button, .close {
   cursor: pointer;
   width: 30px;
   height: 45px;
@@ -196,6 +196,47 @@ header {
         left: calc(50% - 3px);
         top: 14px;
       }
+    }
+  }
+}
+
+.close {
+  span {
+    &:nth-child(1), &:nth-child(6) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    &:nth-child(2), &:nth-child(5) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+    &:nth-child(1) {
+      left: 5px;
+      top: 7px;
+    }
+    &:nth-child(2) {
+      left: calc(50% - 3px);
+      top: 7px;
+    }
+    &:nth-child(3) {
+      left: -50%;
+      opacity: 0;
+    }
+    &:nth-child(4) {
+      left: 100%;
+      opacity: 0;
+    }
+    &:nth-child(5) {
+      left: 5px;
+      top: 14px;
+    }
+    &:nth-child(6) {
+      left: calc(50% - 3px);
+      top: 14px;
     }
   }
 }
@@ -632,6 +673,52 @@ header {
 
 .bounce {
   animation: 2s bounce infinite;
+}
+
+.gallery-modal {
+  background-color: #222;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1800;
+  opacity: 0;
+  visibility: hidden;
+  left: -999999;
+  transition: 0.7s opacity ease-in-out, 0.7s transform ease-in-out, 0.7s visibility ease-in-out;
+  padding: 2rem 1rem;
+  transform: translateY(100%);
+  .close {
+    display: none;
+  }
+}
+
+.gallery-modal.open {
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+  transform: translateY(0);
+  .close {
+    display: block;
+  }
+}
+
+.gallery-modal {
+  ul {
+    margin: 2rem 0;
+    padding: 0;
+    li {
+      float: left;
+      a {
+        display: block;
+        padding: 1rem 1rem 0 0;
+      }
+    }
+  }
 }
 
 @-webkit-keyframes bounce {

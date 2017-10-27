@@ -40,6 +40,24 @@ $(document).ready(function() {
   $('body').on('click  vclick', '#menu a', function(e) {
     $('body').removeClass('menu-open');
   });
+
+  $('body').on('click vclick', '.gallery a', function(e) {
+    e.preventDefault();
+    
+    $.fn.fullpage.setMouseWheelScrolling(false);
+    $.fn.fullpage.setAllowScrolling(false);
+
+    $($(this).attr('data-modal-id')).addClass('open');
+  });
+
+  $('body').on('click vclick', '.gallery-modal .close', function(e) {
+    e.preventDefault();
+
+    $.fn.fullpage.setMouseWheelScrolling(true);
+    $.fn.fullpage.setAllowScrolling(true);
+
+    $(this).closest('.gallery-modal').removeClass('open');
+  })
 });
 
 
