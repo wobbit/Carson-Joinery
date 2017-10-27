@@ -24,6 +24,10 @@ p, address {
   margin-bottom: 1rem;
 }
 
+a {
+  color: #fff;
+}
+
 header {
   background-color: #222;
   padding: 1rem;
@@ -59,6 +63,13 @@ header {
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
+  }
+}
+
+.instagram {
+  svg {
+    vertical-align: bottom;
+    fill: #fff;
   }
 }
 
@@ -749,6 +760,18 @@ header {
       }
     }
   } 
+}
+
+@media only screen and (max-device-width: 320px) {
+  #about-us .left-container {
+    display: none;
+  }
+  #menu a {
+    font-size: 1rem;
+  }
+  #menu li li a {
+    font-size: 0.9rem;
+  }
 }
 
 
