@@ -2241,17 +2241,18 @@ header {
 .gallery-modal {
   background-color: #222;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0px;
+  bottom: 0px;
   width: 100%;
   height: 100%;
-  min-height: 100%;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-perspective: 1000;
   z-index: 1800;
   opacity: 0;
   visibility: hidden;
-  left: -999999;
+  left: -999999px;
   transition: 0.7s opacity ease-in-out, 0.7s transform ease-in-out, 0.7s visibility ease-in-out;
   padding: 2rem 1rem;
   transform: translateY(100%); }
@@ -2261,7 +2262,7 @@ header {
 .gallery-modal.open {
   opacity: 1;
   visibility: visible;
-  left: 0;
+  left: 0px;
   transform: translateY(0); }
   .gallery-modal.open .close {
     display: block; }
@@ -2280,6 +2281,19 @@ header {
     .gallery-modal ul li a {
       display: block;
       padding: 1rem 1rem 0 0; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+  .gallery-modal h1 {
+    font-size: 1rem; }
+  .gallery-modal ul li {
+    width: 33%; }
+    .gallery-modal ul li a {
+      padding: 0.25rem 0.25rem 0 0; }
+    .gallery-modal ul li img {
+      max-width: 100%; } }
+html.modal-open, body.modal-open {
+  height: 100%;
+  overflow: hidden; }
 
 @-webkit-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {

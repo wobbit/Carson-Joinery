@@ -43,11 +43,12 @@ $(document).ready(function() {
 
   $('body').on('click vclick', '.gallery a', function(e) {
     e.preventDefault();
-    
+
     $.fn.fullpage.setMouseWheelScrolling(false);
     $.fn.fullpage.setAllowScrolling(false);
 
     $($(this).attr('data-modal-id')).addClass('open');
+    $('html, body').addClass('modal-open');
   });
 
   $('body').on('click vclick', '.gallery-modal .close', function(e) {
@@ -57,6 +58,7 @@ $(document).ready(function() {
     $.fn.fullpage.setAllowScrolling(true);
 
     $(this).closest('.gallery-modal').removeClass('open');
+    $('html, body').removeClass('modal-open');
   })
 });
 
