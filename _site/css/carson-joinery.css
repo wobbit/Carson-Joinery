@@ -2015,22 +2015,18 @@ header {
     opacity: 1;
     transform: translateY(0); }
 #work #our-work-welcome {
-  background-image: url("../img/work-background.jpg");
+  background-image: url("../img/our-work.jpg");
   background-position: center center;
   background-size: cover;
   position: relative; }
-#work #our-work-exterior-doors {
-  background-image: url("../img/exterior-door.jpg"); }
-#work #our-work-interior-doors {
-  background-image: url("../img/interior-door.jpg"); }
+#work #our-work-doors {
+  background-image: url("../img/doors.jpg"); }
+#work #our-work-fitted-furniture {
+  background-image: url("../img/fitted-furniture.jpg"); }
 #work #our-work-windows {
-  background-image: url("../img/window.jpg"); }
-#work #our-work-bay-windows {
-  background-image: url("../img/bay-window.jpg"); }
-#work #our-work-stairs {
-  background-image: url("../img/stairs.jpg"); }
-#work #our-work-bannisters {
-  background-image: url("../img/slide.jpg"); }
+  background-image: url("../img/windows.jpg"); }
+#work #our-work-staircases {
+  background-image: url("../img/staircases.jpg"); }
 #work .our-work {
   background-color: #222;
   padding: 1rem;
@@ -2111,9 +2107,48 @@ header {
   border-width: 13px;
   margin-left: -13px; }
 
+.our-work__title {
+  position: absolute;
+  bottom: 100px;
+  left: 50px; }
+  .our-work__title h1 {
+    font-size: 4.65rem; }
+
+#our-work-doors .our-work__title {
+  bottom: inherit;
+  top: 100px; }
+
+#our-work-staircases .our-work__title {
+  bottom: inherit;
+  top: 100px; }
+
+#our-work-fitted-furniture .our-work__title {
+  left: inherit;
+  right: 50px; }
+
+.instagram__item {
+  height: 100%; }
+  .instagram__item > span {
+    display: block;
+    width: 220px;
+    margin: 0 auto;
+    max-width: 100%;
+    min-height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #fff;
+    position: relative;
+    padding-top: 30%; }
+    .instagram__item > span:hover {
+      background: rgba(255, 255, 255, 0.2); }
+    .instagram__item > span span {
+      display: block; }
+
+.--no-decoration {
+  text-decoration: none; }
+
 .slide.active .gallery-tip {
   transition-delay: 1s;
-  animation: 5s tooltip 1;
+  animation: 8s tooltip 1;
   animation-delay: 1s; }
 
 #contact h1 {
@@ -2156,6 +2191,9 @@ header {
   .swipe-hint svg {
     fill: #fff; }
 
+@media only screen and (max-width: 1024px) {
+  .our-work__title h1 {
+    font-size: 3rem; } }
 @media only screen and (min-width: 768px) {
   #home .welcome-container {
     bottom: 100px; } }
@@ -2196,6 +2234,16 @@ header {
     line-height: 24px; }
   #work .paging a {
     font-size: 1em; }
+  #work .our-work__title h1 {
+    font-size: 2.2rem; }
+  #work #our-work-staircases .our-work__title {
+    top: inherit;
+    bottom: 100px; }
+  #work #our-work-fitted-furniture .our-work__title {
+    top: 100px;
+    bottom: inherit;
+    left: 50px;
+    right: inherit; }
 
   #contact h1 {
     font-size: 1.25rem; }
@@ -2214,6 +2262,26 @@ header {
 @media only screen and (min-device-width: 320px) and (max-device-width: 450px) and (orientation: portrait) {
   #work #slide7 {
     background-position: -100px center !important; }
+  #work .our-work__title {
+    left: 10px;
+    bottom: 70px;
+    top: inherit;
+    right: inherit; }
+  #work #our-work-staircases {
+    background-position: left center !important; }
+    #work #our-work-staircases .our-work__title {
+      left: 10px;
+      bottom: 70px;
+      top: inherit;
+      right: inherit; }
+  #work #our-work-fitted-furniture .our-work__title {
+    left: 10px;
+    top: 70px;
+    right: inherit; }
+  #work #our-work-windows {
+    background-position: -285px center !important; }
+  #work #our-work-fitted-furnitue {
+    background-position: right center !important; }
 
   #about-us .left-container {
     float: right;
@@ -2234,14 +2302,7 @@ header {
 
   #contact .left-container, #contact .right-container {
     float: none;
-    width: 100%; }
-
-  #work #slide3 {
-    background-position: -290px center !important; }
-  #work #slide6 {
-    background-position: -135px center !important; }
-  #work #slide7 {
-    background-position: -80px center !important; } }
+    width: 100%; } }
 .bounce {
   animation: 2s bounce infinite; }
 
@@ -2249,9 +2310,9 @@ header {
   background-color: #222;
   position: fixed;
   top: 0px;
-  bottom: 0px;
   width: 100%;
   height: 100%;
+  min-height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
@@ -2276,28 +2337,36 @@ header {
 
 .gallery-modal ul {
   margin: 2rem 0;
-  padding: 0; }
-  .gallery-modal ul:after {
-    content: "";
-    clear: both;
-    display: table;
-    width: 0;
-    height: 0; }
-  .gallery-modal ul li {
-    float: left; }
-    .gallery-modal ul li a {
-      display: block;
-      padding: 1rem 1rem 0 0; }
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  grid-gap: 1%;
+  max-width: 700px;
+  margin: 0 auto; }
+  .gallery-modal ul li a {
+    display: block;
+    overflow: hidden;
+    text-align: center; }
+    .gallery-modal ul li a img {
+      display: inline-block;
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle; }
 
+@media screen and (orientation: landscape) and (max-width: 736px) {
+  #menu {
+    padding-top: 3rem; }
+    #menu a {
+      font-size: 0.9rem;
+      padding: 0.25rem 1rem; }
+    #menu li ul {
+      padding-bottom: 0.25rem; }
+    #menu li li a {
+      font-size: 0.8rem;
+      padding: 0 0 0 2rem; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
   .gallery-modal h1 {
-    font-size: 1rem; }
-  .gallery-modal ul li {
-    width: 33%; }
-    .gallery-modal ul li a {
-      padding: 0.25rem 0.25rem 0 0; }
-    .gallery-modal ul li img {
-      max-width: 100%; } }
+    font-size: 1rem; } }
 @media only screen and (max-device-width: 320px) {
   #about-us .left-container {
     display: none; }

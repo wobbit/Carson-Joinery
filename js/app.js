@@ -59,7 +59,24 @@ $(document).ready(function() {
 
     $(this).closest('.gallery-modal').removeClass('open');
     $('html, body').removeClass('modal-open');
-  })
+  });
+
+
+  lightGallery(document.getElementById('modal__staircases'), {
+    selector: '.gallery__item'
+  });
+
+  lightGallery(document.getElementById('modal__windows'), {
+    selector: '.gallery__item'
+  });
+
+  lightGallery(document.getElementById('modal__doors'), {
+    selector: '.gallery__item'
+  });
+
+  lightGallery(document.getElementById('modal__fitted-furniture'), {
+    selector: '.gallery__item'
+  });
 });
 
 
