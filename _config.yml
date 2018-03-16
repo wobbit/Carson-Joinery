@@ -11,7 +11,9 @@ email: info@carsonjoinery.com
 description: > # this means to ignore newlines until "baseurl:"
   Carson Joinery offers a bespoke joinery service across East Sussex, Surrey, and areas in Kent such as Tunbridge Wells and Sevenoaks. We pride ourselves on our quality and professionalism.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://carsonjoinery.com" # the base hostname & protocol for your site
+url: "http://www.carsonjoinery.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+# gems:
+#   - jekyll-responsive-image
